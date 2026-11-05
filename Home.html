@@ -10,8 +10,8 @@
     <nav>
         <h1>Taxpayer Portal</h1>
         <h4>online Tax services</h4>
-        <a href="">Home</a>
-        <a href="">Tax Filing</a>
+        <a href="Home.html">Home</a>
+        <a href="TaxFiling.html">Tax Filing</a>
         <a href="">Payments</a>
         <a href="">Support</a>
         <a href="">About</a><br><br>
@@ -88,8 +88,8 @@ Published: 20 July 2026</p>
     </p>
    </section>
    <section>
-    
-    <fieldset>
+    <form width="300px">
+<fieldset >
         <h2>register a Payment</h2>
    <h4>Personal details</h4>
     <label for="name">Full Name<br>
@@ -99,6 +99,25 @@ Published: 20 July 2026</p>
         Email<br> <input type="email">
     </label>
     </fieldset>
+    <fieldset>
+        <legend>Payment details</legend><!--we can use datalist here-->
+        <label for="amount">Amount (OMR)
+            <input type="number" step="0.01"><small> Enter the amount in Omani Rials, up to two decimal places.</small><br>
+
+        </label><br>
+        <label for="tax">
+            Tax Type<br><!--we can use select drobdown -->
+            <input id="tax" name="tax" type="text">
+        </label><br>
+
+    </fieldset><br>
+    
+    <input type="checkbox">
+    <label> I confirm the information above is accurate </label><br>
+    <input type="submit" value="Submit Payment">
+    <input type="reset" value="Clear Form">
+    </form>
+    
    </section>
 
    </main>
