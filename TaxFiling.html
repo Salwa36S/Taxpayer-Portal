@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Tax Filing</title>
 </head>
 <body>
     <header>
@@ -15,11 +15,13 @@
         <a href="">Payments</a>
         <a href="">Support</a>
         <a href="">About</a><br><br>
+     
         <form>
-            <label for=""serach>Search the portal</label>
-            <input type="search" placeholder="e.g. VAT return">
+            <label for=""search>Search the portal</label>
+            <input type="search" placeholder="e.g. VAT return" id="search" name="search">
             <input type="submit" value="Search">
         </form>
+     </nav>
     </header>
     <main>
     <article>
@@ -33,18 +35,19 @@
     <form>
         <p>A simple form using text, email, telephone, and submit controls.</p>
         <label for="name">Full Name</label><br>
-        <input type="text" width="50px"><br>
+        <input type="text" width="50px" id="name" name="name"><br>
         <label for="Email">Email address</label><br>
-        <input type="email" width="50px"><br>
-        <label for="tel" >Telephone</label><br>
-        <input type="tel" width="50px" placeholder="+968 1234 5678"><br><br>
-        <button type="submit" value="Save contact">Save contact</button><br><br>
+        <input type="email" width="50px" id="Email" name="Email"><br>
+        <label for="Telephone" >Telephone</label><br>
+        <input type="tel" width="50px" placeholder="+968 1234 5678" id="Telephone" name="Telephone"><br><br>
+        <button type="submit">Save contact</button><br><br>
     </form>
 <h2>2. Choose a Return</h2>
 <p>This form adds select menus, dates, radio buttons, and grouped controls.</p>
 <form>
     <fieldset>
         <legend>Filing details</legend>
+        <label for="type">Tax Type</label><br>
         <select name="type" id="type">
             <option value="Choose a tax type">Choose a tax type</option>
             <option value="VAT">VAT</option>
@@ -52,35 +55,41 @@
             <option value="PIT">PIT</option>
         </select><br><br>
         <label for="Period">Period ending
-            <input type="date">
+            <input type="date" id="Period" name="Period">
         </label><br>
     </fieldset><br>
     <fieldset>
 <legend>Return frequency</legend>
-<input type="radio" name="Return" value="Monthly">Monthly<br>
-<input type="radio" name="Return" value="Quarterly"> Annual<br>
-<input type="radio" name="Return" value=" Annual"> Annual<br>
-    </fieldset>
+
+<input type="radio" id="Monthly" name="Return" value="Monthly">
+<label for="Monthly">Monthly</label><br>
+<input type="radio" id="Quarterly" name="Return" value="Quarterly"> 
+<label for="Quarterly">Quarterly</label><br>
+<input type="radio" id="Annual" name="Return" value=" Annual"> 
+<label for="Annual">Annual</label><br>
+    </fieldset><br>
     <button type="submit">Continue</button>
 </form>
 <section>
     <h2>3. Income and Deductions</h2>
     <p>This form introduces number inputs, a datalist, a range control, a textarea, and calculated output.</p>
+    <form>
     <fieldset>
         <legend>Tax calculation</legend>
        
-        <Labl for="income">Gross income (OMR)</Labl><br>
-        <input type="number" step="0.0"><br><br>
-         <Labl for="deductions">Allowable deductions (OMR)</Labl><br>
-        <input type="number" step="0.01">
+        <label for="income">Gross income (OMR)</label><br>
+        <input type="number" step="0.01" id="income" name="income" min="0"><br><br>
+         <label for="deductions">Allowable deductions (OMR)</label><br>
+        <input type="number" step="0.01" id="deductions" name="deductions" min="0">
     </fieldset><br>
     <label for="Confidence">Confidence</label><br>
-    <input id="Confidence" name="Confidence" type="number" pattern="[1-10]"><br>
-    <small>Confidence in this estimate (1-10)</small><br>
+    <input id="Confidence" name="Confidence" type="number" min="1" step="1" max="10" style="width: 200px;"><br>
+    <small style="font-size: 11px;">Confidence in this estimate (1-10)</small><br><br>
     <label for="notes">Calculation notes</label><br>
-    <textarea name="notes" id="notes" cols="" rows="7"></textarea>
+    <textarea name="notes" id="notes" cols="40" rows="7"></textarea>
     <br><br>
     <button type="submit">Save calculation</button>
+    </form>
 </section>
 <section>
     <h2>
@@ -93,23 +102,26 @@
         <label for="Accounting">Accounting month</label><br>
         <input type="month" id="Accounting" name="Accounting"><br>
         <label for="file">Upload supporting documents</label>
-        <input type="file" name="file" accept="PDF, CSV,JPG, OR PNG" multiple><br>
+        <input type="file" name="file" accept=".pdf,.csv,.jpg,.png" multiple><br>
         <small>Accepted examples: PDF, CSV,JPG, OR PNG</small><br>
         <br>
         <label for="Records ">Records included:</label><br>
-        <input type="checkbox" name=" Sales invoices" value=" Sales invoices"> Sales invoices<br>
-        <input type="checkbox" name=" Expense receipts" value=" Expense receipts"> Expense receipts<br>
-        <input type="checkbox" name=" Bank statement" value=" Bank statement"> Bank statement<br><br>
+        <input type="checkbox" name="records" id="Sales" value=" Sales_invoices">
+        <label>Sales invoices</label> <br>
+        <input type="checkbox" name="records" id="Expense" value="Expense_receipts"> 
+        <label>Expense receipts</label><br>
+        <input type="checkbox" name="records" id="Bank" value="Bank_statement">
+        <label>Bank statement</label><br><br>
     </fieldset>
     <fieldset>
         <legend>Declaration</legend>
         <label for="signature">Type your full name as a signature</label><br>
 
-        <input type="text" name="signature"><br>
+        <input type="text" id="signature" name="signature"><br>
         <label for="time">Time signed</label><br>
-        <input type="text" name="time"><br><br>
-        <input type="checkbox" name="con">
-        <label> I confirm that the information in this practice return is accurate.</label><br>
+        <input type="text" id="time" name="time"><br><br>
+        <input type="checkbox" id="confirm" name="confirm">
+        <label for="confirm"> I confirm that the information in this practice return is accurate.</label><br>
     </fieldset><br>
     <Button type="submit" >Submit practice return</Button><Button type="reset">Clear form</Button>
     </form>
