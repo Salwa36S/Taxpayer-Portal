@@ -1,0 +1,97 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+   font-family: Georgia;
+}
+.contanier{
+  margin:0px auto; 
+  padding: 0 20px;
+  max-width: 800px; 
+  background-color: #F4F6F9;
+
+
+}
+.header{
+padding:24px 24px 16px 24px;
+border-bottom-right-radius: 8px;
+border-bottom-left-radius: 8px;
+background-color: #1A4E8A;
+color:white;
+
+
+}
+img{
+    width: 100%;
+}
+h1{
+font-weight: 700;
+font-size: 32px;
+line-height: 54.4px;
+letter-spacing: 0.5px;
+
+}
+.subtitle{
+font-style: Italic;
+font-size: 15.2px;
+line-height: 25.84px;
+letter-spacing: 0px;
+color: #C8D8EF;
+margin-bottom: 16px;
+}
+header a{
+   margin-right: 8px; 
+   padding: 6px 12px;
+   color: white;
+   text-decoration:none;
+   background-color: #2A6AB5;
+   border-radius: 4px;
+   font-family: Georgia;
+   font-weight: 400;
+   font-style: Regular;
+   font-size: 14.4px;
+   line-height: 24.48px;
+}
+header a:hover{
+    background-color: #1A4E8A;
+}
+.line{
+    margin: 4px 0px 32px 0px;
+    height: 1px;
+    background-color: #2A6AB5;
+}
+.searchlabel{
+font-weight: 400;
+font-style:Regular;
+font-size: 13.6px;
+letter-spacing: 0px;
+color: #C8D8EF;
+display: block;
+
+}
+.searchinp{
+width: 260px;
+height: 36px;
+padding: 0 12px;
+border-top-left-radius: 4px;
+border-bottom-left-radius: 4px;
+border: none;
+}
+.searchbut{
+width: 97px;
+height: 36px;
+padding: 0 14px;
+border-radius: 4px;
+font-family: Arial;
+font-weight: 400;
+font-style: Regular;
+font-size: 15.2px;
+line-height: 100%;
+text-align: center;
+color:#FFFFFF;
+border-radius: 4px;
+background-color: #1A4E8A;
+
+}
