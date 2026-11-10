@@ -1,0 +1,16 @@
+:root {
+    --primary-color: #1A4E8A;
+    --secondary-color: #2A6AB5;
+    --primary-color-dark: #123A69;
+    --color-accent-light: #C8D8EF;
+    --border-color: #D0DCE8;
+    --page-bgcolor: #F4F6F9;
+    --quote-bgcolor: #F0F5FF;
+    --line-color: #EEF3FB;
+    --white-color: #FFFFFF;
+    --text-color: #222222;
+    --textmuted-color: #555555;
+    --textcolor-light: #666666;
+    --progress-color: #3F51B5;
+    --progress-bgcolor: #D0DCE8;
+}
